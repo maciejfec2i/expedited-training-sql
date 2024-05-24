@@ -33,7 +33,7 @@ docker run -d --name mysql-sample-db -p 3306:3306 -v mysql-sample-db-vol:/var/li
 
 The custom container should now be running.
 
-Use the following to stop the container
+Use the following command to stop the container
 ```
 docker stop mysql-sample-db
 ```
