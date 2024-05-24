@@ -14,7 +14,7 @@ Presentation covers the following topics:
 - Summary
 - Questions
 
-The following (MySQL Sample Database)[https://www.mysqltutorial.org/getting-started-with-mysql/mysql-sample-database/] was used for demonstration purposes. The (Database Setup)[#database-setup] section can be used to quickly get up and running with the MySQL Sample Database.
+The following [MySQL Sample Database](https://www.mysqltutorial.org/getting-started-with-mysql/mysql-sample-database/) was used for demonstration purposes. The [Database Setup](#database-setup) section can be used to quickly get up and running with the MySQL Sample Database.
 
 ## Technical Requirements
 - Docker
