@@ -8,9 +8,9 @@ Presentation covers the following topics:
   - Key Aspects of SQL
 - Interactive Session
   - Introduction to Database
-  - Join
+  - Joins
   - Aggregation
-  Pivots
+  - Pivots
 - Summary
 - Questions
 
