@@ -45,7 +45,7 @@ Use the following command the start the container
 docker start mysql-sample-db
 ```
 
-## Sample Datbase Credentials
+## Sample Database Credentials
 After going through the setup stage, the following are the credentials to access the database
 - Username: root | Password: password
 
