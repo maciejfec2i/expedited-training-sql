@@ -1,0 +1,100 @@
+INTRO:
+Hi, and wlecome to my presentation on SQL for the SQL Expedited Training module
+
+AGENDA:
+On the agenda for today we have a introductory section, in which we will cover what SQL is, and what MySQL is. After which we will move onto the more exciting interactive section, which will begin with a quick exploration of the database I will be using, and then promptly move on to demonstration of Joins, Aggregation and Pivots using visuals as well as some live qurying of the database. We will wrap up the presentaion with a quick summary and reflaction, and then you'll get to ask me questions. Let's get started
+
+SQL KEY ASPECTS:
+DQL: Data Query Language
+focuses on the retrieval of data. Allows us to retrieve/select whatever data we may need
+Primary commands: SELECT
+
+DDL: Data Definition Language
+used for defining and managing the structure of a database
+Primary commands: CREATE, ALTER, DROP
+
+DML: Data Manipulation Language
+used for manipulating the data within the database (think C(R)UD)
+Primary Commands: INSERT, UPDATE, DELETE
+
+DCL: Data Control Language
+focuses on permissions and access control (who can perform what actions on what database and what tables within)
+Primary commands: GRANT, REVOKE
+
+TCL: Transaction Control Language
+used to manage transaction in a database, and ensures the integrity of the database by grouping sets of operatons into a single atomic unit
+
+Primary commands: COMMIT, ROLLBACK, SAVEPOINT
+
+INTRO TO DATABASE:
+- DB from MySQL TUTORIAL website
+
+WHAT ARE JOINS:
+Joins allow for the retrieval of records from multiple tables, by joining them on a specified column usually holding a unique value. Mostly, this manifests itself in the form of Primary Keys and Foreign Keys.
+
+Primary Key - column that uniquely identifies a record
+Foreign Key - column that establishes a relationship between 2 tables by referring to the primary key column of another table
+
+A query can have a single join, or it can have multiple joins. What records are retrieved will differ depending on the type of Join used.
+
+INNER JOIN:
+- Used to retrieve records that have matching values in both tables
+- Only returns records that have a matching value
+
+LEFT JOIN:
+- Used to retrieve all records from the left or first table and maching records from the right or second table
+- Records with no matching value will display NULL for all right table columns.
+
+FULL OUTER JOIN:
+- No full outer join in MySQL unlike SQL Server or PostgreSQL
+- Can be achived by combining a left join and a right join uisng UNION
+
+CROSS JOIN:
+- Didn't quite understand possible use cases
+- Learned it is a niche join used for retrieving all possible combinations of records
+
+AGGREGATION:
+- A way of combining values from a column of multiple rows into a single result. 
+
+PIVOTS:
+- Allow for transofrming rows into columns.
+- Useful when wanting to summarise data and display it in a different format.
+
+SUMMARY:
+- SQL being a specialised language for interacting with and manipulating Releational Databases
+- Key Language Aspects of SQL
+- Different Types of Join
+- Aggregate functions and using them to perform different calculation on data from multiple records
+- How to achieve Pivots in MySQL without a built in way to do it.
+
+POSSIBLE QUESTIONS:
+What is a RDBMS?
+What are some potential consequences of not utilising TCL?
+
+Elaborate on TCL
+- Big operations with multiple quries modifying multiple tables can be organised into a single transaction for which changes to all modified tables will be applied at the same time at the end of the transaction.
+- Why? We don't want quries in a big multi query operations like that to be modifing tables one by one in case something goes wrong halfway through i.e. server crash, power outage, etc. Which could lead to a inconsistency in the data or loss of data.
+
+Explain ACID
+A - Atomicity - ensures transactions are treated as a single unit
+C - Consistency - ensures the database remanins consistent before and after executing the transaction
+I - Isolation - ensures that the execution of one transaction is isolated from the execution of other transactions
+D - Durability - ensures that once a transaction is committed, its effects are permanent and survive any subsequent failures
+
+Temporary tables in SQL
+WITH tempTableName AS (
+  SELECT ... FROM table
+)
+
+or
+
+CREATE TEMPORARY TABLE tableName
+SELECT ... FROM table
+LIMIT 0;
+
+Explain the Relationships from the ER Diagram
+Can you use different types of joins in the same query?
+Explain the UNION operator/What does UNION do?
+What are Stored Proceedures?
+What are Stored Functions?
+What is Normalization?
