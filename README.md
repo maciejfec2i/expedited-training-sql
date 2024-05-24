@@ -48,3 +48,5 @@ docker start mysql-sample-db
 ## Sample Datbase Credentials
 After going through the setup stage, the following are the credentials to access the database
 - Username: root | Password: password
+
+The name of the database is classicmodels.
